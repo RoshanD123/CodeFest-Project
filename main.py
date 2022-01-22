@@ -7,39 +7,41 @@ def travel(x):
     travel(x)
     return
   else:
-    if th=="yes":
-     fun=str(input("Had you gone to any special events with mass gatherings? "))
-     if fun not in acns:
-      fun = fun.lower()
-      print("Please write the answer again in the proper format.")
-      travel(x)
-      return
-     else:
-       while True:
-        try:
-          peeps = int(input("Please enter approximately how many people were there - "))
-        except ValueError:
-          print("Sorry, I didn't understand that.")
-          continue
-          if peeps < 0:
-           print("It is impossible for the number of people to be negative. Please keep this in mind when rewriting your response.")
+   if th=="yes":
+    fun=str(input("Had you gone to any special events with mass gatherings? "))
+    if fun not in acns:
+       fun = fun.lower()
+       print("Please write the answer again in the proper format.")
+       travel(x)
+       return
+    elif fun=="yes":
+      while True:
+         try:
+           peeps = int(input("Please enter approximately how many people were there - "))
+         except ValueError:
+           print("Sorry, I didn't understand that.")
            continue
-          else:
-           break
-        if peeps>=55 and not x=="none":
-         print("You are at a higher risk to have",x,"please go to a doctor to keep yourself safe")
+           if peeps < 0:
+            print("It is impossible for the number of people to be negative. Please keep this in mind when rewriting your response.")
+            continue
+           else:
+            break
+         if peeps>=55 and not x=="none":
+          print("You are at a higher risk to have",x,"please go to a doctor to keep yourself safe")
         
         
-        elif peeps>=55 and x=="none":
-         print("You have a higher risk of catching covid in general, take a test(COVID test) to be sure")
+         elif peeps>=55 and x=="none":
+          print("You have a higher risk of catching covid in general, take a test(COVID test) to be sure")
         
-        elif peeps<55 and x=="none":
-         print("Good. Take care of yourself. Though there were few people, you still may have a risk of COVID-19.")
+         elif peeps<55 and x=="none":
+          print("Good. Take care of yourself. Though there were few people, you still may have a risk of COVID-19.")
 
         
-        else:
-         print("Good, you have a lower risk of having",x,", but from now on, avoid crowds to ensure your safety")
+         else:
+          print("Good, you have a lower risk of having",x,", but from now on, avoid crowds to ensure your safety")
     else:
+      print("Good job for avoiding mass gatherings, but ensure to stay at home and maintain all social protocols at the place you are at.") 
+   else:
       print("Good Job, but now follow all COVID protocols and dont go to large crowds")
     
         
