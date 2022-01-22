@@ -1,3 +1,6 @@
+'''
+This Program is used as a COVID predictor
+'''
 def travel(x):
   acns=["yes","no"]
   th = str(input("In the last two to three weeks, have you travelled anywhere? "))
@@ -53,85 +56,111 @@ def symptoms():
   o="Omnicron Variant of COVID"
   f="Flu"
   c="Common Cold"
-  acns=["yes","no"]
+  acns=["yes","no","YES","NO","YEs","No","Yes","yEs","nO","yES"]
   input("Please respond to the following questions in a Yes/No format only")
   v="none"
   cough = str(input("Have you been coughing frequently? "))
-  if cough not in acns:
+  cough = cough.lower()
+  while True:
+    cough = str(input("Have you been coughing frequently? "))
     cough = cough.lower()
-    print("Please write the answer again in the proper format.")
-    symptoms()
-    return
+    if cough not in acns:
+     print("Please write the answer again in the proper format.")
+     continue
+    else:
+      break
   else:
    runny_nose = str(input("Is your nose runny? "))
-   while runny_nose not in acns:
+   runny_nose = runny_nose.lower()
+   while True:
+    runny_nose = str(input("Have you been coughing frequently? "))
     runny_nose = runny_nose.lower()
-    print("Please write the answer again in the proper format.")
-    symptoms()
-    return
+    if runny_nose not in acns:
+     print("Please write the answer again in the proper format.")
+     continue
+    else:
+       break
    else:
      sneezing = str(input("Have you been sneezing frequently? "))
-     if sneezing not in acns:
-       sneezing = sneezing.lower()
-       print("Please write the answer again in the proper format.")
-       symptoms()
-       return
+     sneezing = sneezing.lower()
+     while True:
+       if sneezing not in acns:
+         print("Please write the answer again in the proper format.")
+         continue
+       else:
+        break
      else:
       shortness_of_breath = str(input("Do you have any difficulty in  breathing? "))
-      if shortness_of_breath not in acns:
-        shortness_of_breath = shortness_of_breath.lower()
-        print("Please write the answer again in the proper format.")
-        symptoms()
-        return
+      shortness_of_breath = shortness_of_breath.lower()
+      while True:
+        if shortness_of_breath not in acns:
+          print("Please write the answer again in the proper format.")
+          continue
+        else:
+         break
       else:
        sore_throat = str(input("Do you have a sore throat? "))
-       if sore_throat not in acns:
-         sore_throat=sore_throat.lower()
-         print("Please write the answer again in the proper format.")
-         symptoms()
-         return
+       sore_throat=sore_throat.lower()
+       while True:
+         if sore_throat not in acns:
+          print("Please write the answer again in the proper format.")
+          continue
+         else:
+          break
        else:
         fever = str(input("Do you have a fever? "))
-        if fever not in acns:
-          fever=fever.lower()
-          print("Please write the answer again in the proper format.")
-          symptoms()
-          return
+        fever=fever.lower()
+        while True:
+          if fever not in acns:
+            print("Please write the answer again in the proper format.")
+            continue
+          else:
+           break
         else:
          night_sweats = str(input("Do you sweat in the night? "))
-         if night_sweats not in acns:
-           night_sweats=night_sweats.lower()
+         night_sweats=night_sweats.lower()
+        while True:
+          if night_sweats not in acns:
            print("Please write the answer again in the proper format.")
-           symptoms()
-           return
-         else:
-          chills = str(input("Have you been getting chills recently? "))
-          if chills not in acns:
-            chills = chills.lower()
-            print("Please write the answer again in the proper format.")
-            symptoms()
-            return
+           continue
           else:
+           break
+        else:
+          chills = str(input("Have you been getting chills recently? "))
+          chills = chills.lower()
+        while True:
+            if chills not in acns:
+              print("Please write the answer again in the proper format.")
+              continue
+            else:
+              break
+        else:
            headache = str(input("Have you been getting headaches recently? "))
-           if headache not in acns:
-             headache = headache.lower()
-             print("Please write the answer again in the proper format.")
-             symptoms()
-             return
+           headache = headache.lower()
+           while True:
+             if headache not in acns:
+              print("Please write the answer again in the proper format.")
+              continue
+             else:
+              break
            else:
              loss_of_smell = str(input("Have you lost your sense of smell? "))
-             if loss_of_smell not in acns:
-               loss_of_smell = loss_of_smell.lower()
-               print("Please write the answer again in the proper format.")
-               symptoms()
-               return
+             loss_of_smell = loss_of_smell.lower()
+             while True:
+               if loss_of_smell not in acns:
+                print("Please write the answer again in the proper format.")
+                continue
+               else:
+                 break
              else:
               fatigue = str(input("Have you been feeling tired and getting a lot of fatigue? "))
-              if fatigue not in acns:
-                fatigue = fatigue.lower()
-                print("Please write the answer again in the proper format.")
-                symptoms()
-                return
+              fatigue = fatigue.lower()
+              while True:
+                if fatigue not in acns:
+                   print("Please write the answer again in the proper format.")
+                   continue
+                else:
+                  break
               else:
                while True:
                 try:
@@ -193,11 +222,11 @@ while True:
     try:
         age = int(input("Please enter your age: "))
     except ValueError:
-        print("Sorry, I didn't understand that.")
+        print("Sorry, Invalid Input.")
         continue
 
-    if age < 0:
-        print("It is impossible for age to be negative. Please keep this in mind.")
+    if age <= 5 or age>95:
+        print("Sorry, Invalid Input.")
         continue
     else:
         break
