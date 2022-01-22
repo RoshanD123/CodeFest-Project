@@ -135,21 +135,21 @@ def symptoms():
                 print("Be careful as you are in dangerous condition, and maintain COVID protocols all the time to ensure your safety.")
                 travel()
             
-               elif dis=="no" and cough=="yes" or runny_nose=="yes" or sneezing=="yes" or shortness_of_breath=="yes" or sore_throat=="yes"or fever=="yes" or night_sweats=="yes" or chills=="yes" or headache=="yes" or loss_of_smell=="yes" or fatigue=="yes":
+              elif dis=="no" and cough=="yes" or runny_nose=="yes" or sneezing=="yes" or shortness_of_breath=="yes" or sore_throat=="yes"or fever=="yes" or night_sweats=="yes" or chills=="yes" or headache=="yes" or loss_of_smell=="yes" or fatigue=="yes":
                 print("Please continue")
                 if cough==a and runny_nose==a and sneezing==b and shortness_of_breath==a and sore_throat==a and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==a and fatigue==a and Time==4 or Time==5:
-                print("You are most likely to have Delta Variant of COVID")
+                 print("You are most likely to have Delta Variant of COVID")
                 travel(d)
-                elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==a and chills==a and headache==a and loss_of_smell==a and fatigue==a and Time==2 or Time==3:
+              elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==a and chills==a and headache==a and loss_of_smell==a and fatigue==a and Time==2 or Time==3:
                 print("You are most likely to have Omnicron Variant of COVID")
                 travel(o)
-                elif cough==a and runny_nose==a and sneezing==b and  shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==4:
+              elif cough==a and runny_nose==a and sneezing==b and  shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==4:
                 print("You are most likely to have the flu")
                 travel(f)
-                elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==b and headache==a and loss_of_smell==b and fatigue==a and Time==1 or Time==3:
+              elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==b and headache==a and loss_of_smell==b and fatigue==a and Time==1 or Time==3:
                 print("You are most likely to have the common cold")
                 travel(c)
-                else:
+              else:
                  if cough==b and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==b and night_sweats==b and chills==b and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==3:
                   print("You might have Omnicron Variant of COVID")
                   travel(o)
@@ -159,9 +159,10 @@ def symptoms():
                  elif cough==a and runny_nose==a and sneezing==b and           shortness_of_breath==b and sore_throat==a and fever==a and    night_sweats==b and chills==b and headache==b and loss_of_smell==a and fatigue==b and Time==1 or Time==3:
                    print("You might have the common cold")
                    travel(c)
-               elif dis=="no" and cough=="no" and runny_nose=="no" and sneezing=="no" and shortness_of_breath=="no" and sore_throat=="no" and fever=="no" and night_sweats=="no" and chills=="no" and headache=="no" and loss_of_smell=="no" and fatigue=="no":
-                print("You are in no danger, but be careful and follow all COVID protocols to ensure your safety and the safety of others around you")
-                travel() 
+                 elif dis=="no" and cough=="no" and runny_nose=="no" and sneezing=="no" and shortness_of_breath=="no" and sore_throat=="no" and fever=="no" and night_sweats=="no" and chills=="no" and headache=="no" and loss_of_smell=="no" and fatigue=="no":
+                  print("You are in no danger, but be careful and follow all COVID protocols to ensure your safety and the safety of others around you")
+                  z="none"
+                  travel(z) 
 
     
 print("Welcome to the COVID Predictor")
@@ -177,8 +178,6 @@ while True:
         print("Sorry, your response must not be negative.")
         continue
     else:
-        #age was successfully parsed, and we're happy with its value.
-        #we're ready to exit the loop.
         break
 if age>=60:
   dose=int(input("How many doses  of vaccination have you taken?"))
