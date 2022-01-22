@@ -31,25 +31,28 @@ def travel(x):
             break
          if peeps>=55 and not x=="none":
           print("You are at a higher risk to have",x,"please go to a doctor to keep yourself safe")
-          break
           print("Thank you so much for using our application.  Hope you get better soon!")
+          break
+          
         
         
          elif peeps>=55 and x=="none":
           print("You have a higher risk of catching covid in general, take a test(COVID test) to be sure")
-          break
           print("Thank you so much for using our application.  Hope you get better soon!")
+          break
+          
         
          elif peeps<55 and x=="none":
           print("Good.  Take care of yourself.  Though there were few people, you still may have a risk of COVID-19. ")
-          break
           print("Thank you so much for using our application.  Hope you get better soon!")
+          break
+          
 
         
          else:
           print("Good, you have a lower risk of having",x,", but from now on, avoid crowds to ensure your safety")
-          break
           print("Thank you so much for using our application.  Hope you get better soon!")
+          break
     else:
       print("Good job for avoiding mass gatherings, but ensure to stay at home and maintain all social protocols at the place you are at. ") 
       print("Thank you so much for using our application.  Hope you get better soon!")
@@ -166,7 +169,7 @@ def symptoms():
                     print("Sorry, but you must enter numerical Units. ")
                     continue
                 if Time < 1 or Time > 5:
-                 print("Time always moves forward, genius. ")
+                 print("Sorry,  Invalid Input, these diseases mostly occur between 1 to 5 days, which are the limitations of the code.")
                  continue
                 else:
                  break
@@ -223,7 +226,7 @@ while True:
         continue
 
     if age <= 5 or age>95:
-        print("Sorry, Invalid Input. ")
+        print("Sorry, Invalid Input, it can only be in between 5 and 95 years of age. ")
         continue
     else:
         break
