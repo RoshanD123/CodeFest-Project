@@ -1,4 +1,3 @@
-
 def travel(x):
   acns=["yes","no"]
   th = str(input("In the last two to three weeks, have you travelled anywhere? "))
@@ -8,37 +7,41 @@ def travel(x):
     travel(x)
     return
   else:
-    fun=str(input("Had you gone to any special events with mass gatherings? "))
-    if fun not in acns:
-     fun = fun.lower()
-     print("Please write the answer again in the proper format.")
-     travel(x)
-     return
-    else:
-      while True:
-       try:
-        peeps = int(input("Please enter approximately how many people were there - "))
-       except ValueError:
-        print("Sorry, I didn't understand that.")
-        continue
-       if peeps < 0:
-        print("It is impossible for the number of people to be negative. Please keep this in mind when rewriting your response.")
-        continue
-       else:
-        break
-      if peeps>=55 and not x=="none":
-        print("You are at a higher risk to have",x,"please go to a doctor to keep yourself safe")
+    if th=="yes":
+     fun=str(input("Had you gone to any special events with mass gatherings? "))
+     if fun not in acns:
+      fun = fun.lower()
+      print("Please write the answer again in the proper format.")
+      travel(x)
+      return
+     else:
+       while True:
+        try:
+          peeps = int(input("Please enter approximately how many people were there - "))
+        except ValueError:
+          print("Sorry, I didn't understand that.")
+          continue
+          if peeps < 0:
+           print("It is impossible for the number of people to be negative. Please keep this in mind when rewriting your response.")
+           continue
+          else:
+           break
+        if peeps>=55 and not x=="none":
+         print("You are at a higher risk to have",x,"please go to a doctor to keep yourself safe")
         
         
-      elif peeps>=55 and x=="none":
-        print("You have a higher risk of catching covid in general, take a test(COVID test) to be sure")
+        elif peeps>=55 and x=="none":
+         print("You have a higher risk of catching covid in general, take a test(COVID test) to be sure")
         
-      elif peeps<55 and x=="none":
-        print("Good. Take care of yourself. Though there were few people, you still may have a risk of COVID-19.")
+        elif peeps<55 and x=="none":
+         print("Good. Take care of yourself. Though there were few people, you still may have a risk of COVID-19.")
 
         
-      else:
-        print("Good, you have a lower risk of having",x,", but from now on, avoid crowds to ensure your safety")
+        else:
+         print("Good, you have a lower risk of having",x,", but from now on, avoid crowds to ensure your safety")
+    else:
+      print("Good Job, but now follow all COVID protocols and dont go to large crowds")
+    
         
           
 def symptoms():
@@ -154,36 +157,33 @@ def symptoms():
                 if cough==a and runny_nose==a and sneezing==b and shortness_of_breath==a and sore_throat==a and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==a and fatigue==a and Time==4 or Time==5:
                  print("You are most likely to have Delta Variant of COVID")
                  travel(d)
-
-                travel(d)
-              elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==a and chills==a and headache==a and loss_of_smell==a and fatigue==a and Time==2 or Time==3:
-                print("You are most likely to have Omnicron Variant of COVID")
-                travel(o)
+                elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==a and chills==a and headache==a and loss_of_smell==a and fatigue==a and Time==2 or Time==3:
+                 print("You are most likely to have Omnicron Variant of COVID")
+                 travel(o)
                 
-              elif cough==a and runny_nose==a and sneezing==b and  shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==4:
-                print("You are most likely to have the flu")
-                travel(f)
+                elif cough==a and runny_nose==a and sneezing==b and  shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==4:
+                 print("You are most likely to have the flu")
+                 travel(f)
 
-              elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==b and headache==a and loss_of_smell==b and fatigue==a and Time==1 or Time==3:
-                print("You are most likely to have the common cold")
-                travel(c)
+                elif cough==a and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==a and night_sweats==b and chills==b and headache==a and loss_of_smell==b and fatigue==a and Time==1 or Time==3:
+                 print("You are most likely to have the common cold")
+                 travel(c)
+                else:
+                  if cough==b and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==b and night_sweats==b and chills==b and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==3:
+                   print("You might have Omnicron Variant of COVID")
+                   travel(o)
 
-              else:
-                 if cough==b and runny_nose==a and sneezing==a and shortness_of_breath==b and sore_throat==a and fever==b and night_sweats==b and chills==b and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==3:
-                  print("You might have Omnicron Variant of COVID")
-                  travel(o)
-
-                 elif cough==a and runny_nose==b and sneezing==b and shortness_of_breath==b and sore_throat==b and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==4:
-                  print("You might have the flu") 
-                  travel(f)
+                  elif cough==a and runny_nose==b and sneezing==b and shortness_of_breath==b and sore_throat==b and fever==a and night_sweats==b and chills==a and headache==a and loss_of_smell==b and fatigue==a and Time==2 or Time==4:
+                   print("You might have the flu") 
+                   travel(f)
                   
-                 elif cough==a and runny_nose==a and sneezing==b and           shortness_of_breath==b and sore_throat==a and fever==a and    night_sweats==b and chills==b and headache==b and loss_of_smell==a and fatigue==b and Time==1 or Time==3:
+                  elif cough==a and runny_nose==a and sneezing==b and           shortness_of_breath==b and sore_throat==a and fever==a and    night_sweats==b and chills==b and headache==b and loss_of_smell==a and fatigue==b and Time==1 or Time==3:
                    print("You might have the common cold")
                    travel(c)
                    
-                 elif dis=="no" and cough=="no" and runny_nose=="no" and sneezing=="no" and shortness_of_breath=="no" and sore_throat=="no" and fever=="no" and night_sweats=="no" and chills=="no" and headache=="no" and loss_of_smell=="no" and fatigue=="no":
-                  print("You are in no danger, but be careful and follow all COVID protocols to ensure your safety and the safety of others around you")
-                  travel(v)  
+              elif dis=="no" and cough=="no" and runny_nose=="no" and sneezing=="no" and shortness_of_breath=="no" and sore_throat=="no" and fever=="no" and night_sweats=="no" and chills=="no" and headache=="no" and loss_of_smell=="no" and fatigue=="no":
+                print("You are in no danger, but be careful and follow all COVID protocols to ensure your safety and the safety of others around you")
+                travel(v)  
                   
 print("Welcome to the COVID Predictor")
 Name=str(input("What is your name? "))
