@@ -1,8 +1,6 @@
 '''
 This Program is used as a COVID predictor
 '''
-
-
 def travel(x,y):
     acns = ["yes", "no"]
     th = str(
@@ -10,7 +8,7 @@ def travel(x,y):
     if th not in acns:
         th = th.lower()
         print("Please write the answer again in the proper format. ")
-        travel(x)
+        travel(x,y)
         return
     else:
         if th == "yes":
@@ -21,7 +19,7 @@ def travel(x,y):
             if fun not in acns:
                 fun = fun.lower()
                 print("Please write the answer again in the proper format. ")
-                travel(x)
+                travel(x,y)
                 return
             elif fun == "yes":
                 while True:
@@ -43,7 +41,7 @@ def travel(x,y):
                     if peeps >= 55 and not x == "none":
                         print("Dear",y,", you are at a higher risk to have",x,"please go to a doctor to keep yourself safe")
                         print(
-                            "\nThank you so much for using our application.  Hope you stay safe,(take a COVID test as well)",y,"!"
+                            "\nThank you so much for using our application.  Hope you get better soon from",x,"(take a COVID test as well)",y,"to ensure that you are safe from errors in our predicitons"
                         )
                         break
 
@@ -52,7 +50,7 @@ def travel(x,y):
                             "Dear",y,", you have a higher risk of catching covid in general, take a test(COVID test) to be sure"
                         )
                         print(
-                            "\nThank you so much for using our application.  Hope you stay safe,(take a COVID test as well)",y,"!"
+                            "\nThank you so much for using our application.  Hope you get better soon from",x,"(take a COVID test as well)",y,"to ensure that you are safe from errors in our predicitons"
                         )
                         break
 
@@ -61,7 +59,7 @@ def travel(x,y):
                             "Dear",y,",  Take care of yourself.  Though there were few people, you still may have a risk of COVID-19. "
                         )
                         print(
-                            "\nThank you so much for using our application.  Hope you stay safe(take a COVID test as well),",y,"!"
+                            "\nThank you so much for using our application.  Hope you get better soon from",x,"(take a COVID test as well)",y,"to ensure that you are safe from errors in our predicitons"
                         )
                         break
 
@@ -71,7 +69,7 @@ def travel(x,y):
                             ", but from now on, avoid crowds to ensure your safety"
                         )
                         print(
-                            "\nThank you so much for using our application.  Hope you get better soon and stay safe(take a COVID test as well)",y,"!"
+                            "\nThank you so much for using our application.  Hope you get better soon from",x,"(take a COVID test as well)",y,"to ensure that you are safe from errors in our predicitons"
                         )
                         break
             else:
@@ -79,14 +77,14 @@ def travel(x,y):
                     "Dear",y,",Good job for avoiding mass gatherings, but ensure to stay at home and maintain all social protocols at the place you are at. "
                 )
                 print(
-                    "\nThank you so much for using our application.  Hope you get better soon(take a COVID test as well)",y,"!"
+                    "\nThank you so much for using our application.  Hope you get better soon from",x,"(take a COVID test as well)",y,"to ensure that you are safe from errors in our predicitons"
                 )
         else:
             print(
                 "Dear",y,",Good Job, but now follow all COVID protocols and don't go to large crowds"
             )
             print(
-                "\nThank you so much for using our application.  Hope you get better soon(take a COVID test as well)",y,"!"
+                "\nThank you so much for using our application.  Hope you get better soon from",x,"(take a COVID test as well)",y,"to ensure that you are safe from errors in our predicitons"
             )
 
 
@@ -221,7 +219,7 @@ def symptoms(y):
     ]
     print(listof)
     dis = str(input("Have you got any of these diseases[Yes/No]? "))
-    z="chronic condition"
+    z=" your chronic condition"
     if dis == "yes" and cough == "yes" and runny_nose == "yes" and sneezing == "yes" and shortness_of_breath == "yes" and sore_throat == "yes" and fever == "yes" and night_sweats == "yes" and chills == "yes" and headache == "yes" and loss_of_smell == "yes" and fatigue == "yes":
         print(
             "You are in an extreme chronic condition and so go to a doctor as soon as possible. "
